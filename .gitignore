@@ -1,0 +1,10 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.log
+.ipynb_checkpoints/
+.streamlit/
+.DS_Store
+Thumbs.db
