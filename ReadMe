@@ -1,50 +1,60 @@
 
-## Recommendation Web App
+# Recommendation Projects
 
-This project is a recommendation web app built using Python and various machine learning libraries. The goal is to provide users with personalized recommendations based on their preferences and behavior.
+This repository contains two Streamlit-based recommendation apps:
 
-## Features
+- `book-recommendation` for book recommendations
+- `movie-recommendation` for movie recommendations
 
-- User authentication and profile management
-- Recommendation database with detailed information
-- Collaborative filtering for personalized recommendations
-- Content-based filtering using metadata
-- User-friendly web interface
+Both apps use Python, pandas, NumPy, scikit-learn, and Streamlit. The book app uses prebuilt artifacts in `book-recommendation/artifact/`, while the movie app reads from `movie-recommendation/artifact/` and fetches posters from The Movie Database API.
 
-## Technologies Used
+## Project Structure
 
-- Python
-- Pandas
-- Scikit-learn
-- Streamlit
+- `book-recommendation/` - book recommender app, notebook, artifacts, and source data
+- `movie-recommendation/` - movie recommender app, notebook, artifacts, and source data
+- `requirement.txt` - shared Python dependencies
 
-## Installation
+## Setup
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/007ash/recommendation-Project.git
-   cd recommendation-web-app
+   git clone https://github.com/007ash/Recommendation-Projects.git
+   cd Recommendation-Projects
    ```
 
-2. Create a virtual environment and activate it:
+2. Create and activate a virtual environment:
 
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   venv\Scripts\activate
    ```
 
-3. Install the required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. To run the application, use the following command:
+3. Install the dependencies:
 
    ```bash
-   streamlit run app.py
+   pip install -r requirement.txt
    ```
+
+## Run the Apps
+
+Run each app from its own folder:
+
+```bash
+cd book-recommendation
+streamlit run app.py
+```
+
+```bash
+cd movie-recommendation
+streamlit run app.py
+```
+
+## Notes
+
+- The movie recommender requires internet access to load poster images.
+- The apps expect the artifact files already present in the repository.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+Contributions are welcome. If you find a bug or want to improve the project, open an issue or submit a pull request.
